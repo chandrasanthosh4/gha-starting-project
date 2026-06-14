@@ -1,5 +1,11 @@
 name: Output Information
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: name of the target branch
+        required: true
+        default: master
 jobs:
   info:
     runs-on: ubuntu:latest
